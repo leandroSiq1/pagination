@@ -1,0 +1,84 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700,300);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: var(--background);
+  color: var(--white);
+}
+
+:root {
+  --background: #121214;
+
+  --white: #FFF;
+  --purple: #8257E6;
+  --orange: #FA7A29;
+  --yellow: #FFCD1E;
+}
+
+*, 
+button,
+input {
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+
+  background-color: var(--purple);
+  padding: 16px;
+}
+
+#paginate {
+  width: 100%;
+
+  margin: 32px auto;
+}
+
+#paginate .item {
+  border-bottom: 1px solid var(--purple);
+  padding: 16px 32px;
+}
+
+#paginate .item:hover {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+#paginate .controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 8px;
+}
+
+#paginate .controls div {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14;
+}
+
+#paginate .controls div:not(.numbers),
+#paginate .controls div.numbers div{
+  width: 40px;
+  height: 40px;
+}
+
+#paginate .controls div.numbers div:hover {
+  color: var(--purple);
+}
+
+#paginate .controls div.numbers div:hover,
+#paginate .controls div.numbers div.active {
+  color: var(--purple);
+}
